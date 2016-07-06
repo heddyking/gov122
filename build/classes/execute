@@ -1,0 +1,1 @@
+java -cp ./jackson-all-1.9.0.jar:./com.sun.net.httpserver.jar:./commons-io.jar:. HttpYzmServer
