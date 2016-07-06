@@ -23,7 +23,7 @@ public class Run {
         RecCodeAuto.init("122.lib");
         String json = "["
 //                + "{\"Province\":\"gz\",\"Username\":\"532530199508040233\", \"Password\":\"Pppp0000\",\"State\":\"0\"},"
-                + "{\"Province\":\"gz\",\"Username\":\"342222199502235839\", \"Password\":\"Pppp0000\",\"State\":\"0\"}"
+                + "{\"Province\":\"gz\",\"Username\":\"341124199502272011\", \"Password\":\"Pppp0000\",\"State\":\"0\"}"
                 + "]";
         try {
             list = new ObjectMapper().readValue(json, List.class);
@@ -54,7 +54,7 @@ public class Run {
                      }
                 });
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(5000);
                 } catch (Exception e) {
                 }
             }
@@ -101,7 +101,7 @@ public class Run {
                 }).start();
             }
             try {
-                Thread.sleep(10000);
+                Thread.sleep(20000);
             } catch (Exception e) {
             }
         }
