@@ -29,7 +29,7 @@ public class Stepx_Monitor {
             System.out.println("Request--->" + urlName);
             URL realUrl = new URL(urlName);
             //打开和URL之间的连接
-            conn = (HttpURLConnection) realUrl.openConnection(ProxyRequestUtils.proxy);
+            conn = (HttpURLConnection) realUrl.openConnection();
 
             //设置通用的请求属性，请设置好请求时延  ！!!务必处理请求超时！！！
             conn.setReadTimeout(5000);

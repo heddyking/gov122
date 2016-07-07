@@ -23,7 +23,8 @@ public class Run {
         RecCodeAuto.init("122.lib");
         String json = "["
 //                + "{\"Province\":\"gz\",\"Username\":\"532530199508040233\", \"Password\":\"Pppp0000\",\"State\":\"0\"},"
-                + "{\"Province\":\"gz\",\"Username\":\"341124199502272011\", \"Password\":\"Pppp0000\",\"State\":\"0\"}"
+                + "{\"Province\":\"gz\",\"Username\":\"341226199503112771\", \"Password\":\"Pppp0000\",\"State\":\"0\"}"
+//                + "{\"Province\":\"gz\",\"Username\":\"341223199504073314\", \"Password\":\"Pppp0000\",\"State\":\"0\"}"
                 + "]";
         try {
             list = new ObjectMapper().readValue(json, List.class);
@@ -50,11 +51,21 @@ public class Run {
                          System.out.println("Pass Phone Verify: " + map.get("Username"));
                          System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
                          
-                         Step6_SavePhone.phoneyzm(map);
+                         Map<String,Object> map6=Step6_SavePhone.phoneyzm(map);
+                         //can't pass yzm
+                         if(!(map6.get("Body")+"").contains("操作成功")){
+                             map.put("State", "0");
+                             continue;
+                         }
+                         
+                         //try to select car number
+                         while(!Objects.equals(map.get("State"), "2")){
+                             
+                         }
                      }
                 });
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(6660);
                 } catch (Exception e) {
                 }
             }
@@ -101,7 +112,7 @@ public class Run {
                 }).start();
             }
             try {
-                Thread.sleep(20000);
+                Thread.sleep(111110);
             } catch (Exception e) {
             }
         }
