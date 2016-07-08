@@ -109,11 +109,15 @@ public class Step1_Home {
 	}
 	
 	public static String getSessionId(String cookie){
-		String s=cookie;
+	    String sessionid="";
+            try{
+                String s=cookie;
 		int a=s.indexOf("JSESSIONID-L=");
 		int b=s.indexOf(";", a);
-		String sessionid=s.substring(a+13, b);
-		return sessionid;
+		sessionid=s.substring(a+13, b);
+            }catch(Exception e){
+            }
+	    return sessionid;
 	}
 	
 	private static class TrustAnyTrustManager implements X509TrustManager {

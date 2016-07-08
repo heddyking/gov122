@@ -63,7 +63,7 @@ public class RecCodeAuto{
     public static void main(String[] args) throws IOException {
 //		RecCodeAuto.init("122.lib");
 //		byte[] bs = IOTool.getContent("C:\\Users\\xiaoxi\\Desktop\\123.bmp");
-                RecCodeAuto.init("122_fj.lib");
+                RecCodeAuto.init("122.lib");
 		byte[] bs = RecCodeIOTool.getContent("C:\\Users\\wang_xiaox\\Desktop\\JavaServer\\123.jpg");
 		getCode(bs);
 	}
